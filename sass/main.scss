@@ -8,7 +8,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .header {
       &__logo {
         display: flex;
@@ -17,14 +17,28 @@
         border-top: none;
         border-left: none;
         border-right: none;
-        box-shadow: 0px 2px 5px #d2d2d2;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        box-shadow: 0px 4px 10px #d2d2d2;
         padding-bottom: 15px;
+        padding-top: 25px;
       }
-        &__search-place {
-            border: none;
+        &__form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 4px;
+            background-color: #eaeaea;
+            height: 50px;
         }
+            &__form input {
+                border: none;
+                background-color: #eaeaea;
+                font-size: large;
+                font-weight: 500;
+                width: 170px;
+            }
     }
     
+
+
 }
