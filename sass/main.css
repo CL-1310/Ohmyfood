@@ -1,0 +1,29 @@
+@media (max-width: 767px) {
+  * {
+    font-family: 'Roboto';
+  }
+  .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    border: solid, 5px, white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    -webkit-box-shadow: 0px 2px 5px #d2d2d2;
+            box-shadow: 0px 2px 5px #d2d2d2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  .header__logo__search-place {
+    border: none;
+  }
+  header img {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*# sourceMappingURL=main.css.map */
