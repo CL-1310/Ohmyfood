@@ -1,3 +1,5 @@
+@import "./utils/variable";
+
 @media (max-width: 767px) {
     * {
         font-family: 'Roboto';
@@ -38,7 +40,21 @@
                 width: 170px;
             }
     }
-    
+
+    .header__title-explore {
+        background-color: $light-grey;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__title-explore  h1 {
+        margin-right: 0px;
+        font-size: x-large;
+    }
 
 
 }
