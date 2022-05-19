@@ -1,146 +1,181 @@
 @import "./utils/variable";
 
-@media (max-width: 767px) {
-    * {
-        font-family: 'Roboto';
-    }
-    
-    header img {
-        width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+* {
+    font-family: 'Roboto';
+}
 
-    .header {
-      &__logo {
-        display: flex;
-        width: 100%;
-        border: solid, 5px, white;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        box-shadow: 0px 4px 10px #d2d2d2;
-        padding-bottom: 15px;
-        padding-top: 25px;
+header img {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    &__logo {
+      display: flex;
+      width: 100%;
+      border: solid, 5px, white;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      box-shadow: 0px 4px 10px #d2d2d2;
+      padding-bottom: 15px;
+      padding-top: 25px;
+    }
+      &__form {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin-top: 4px;
+          background-color: #eaeaea;
+          height: 100px;
       }
-        &__form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-top: 4px;
-            background-color: #eaeaea;
-            height: 50px;
-        }
-            &__form input {
-                border: none;
-                background-color: #eaeaea;
-                font-size: large;
-                font-weight: 500;
-                width: 170px;
-            }
-    }
+          &__form input {
+              border: solid 1px white;
+              background-color: white;
+              font-size: x-large;
+              font-weight: 500;
+              width: 200px;
+              height: 45px;
+              margin-left: -10px;
+          }
+  }
 
-    .header__title-explore {
-        background-color: $light-grey;
-        padding-top: 30px;
-        padding-bottom: 55px;
-        text-align: center;
-    }
+  .fa-map-marker-alt {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: solid 1px white;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 40px;
+    height: 29px;
+    padding-top: 15px;
+    font-size: large;
+  }
 
-    .header__title-explore  h1 {
+  .header__btn-search {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: solid 1px white;
+    background-color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 50px;
+    height: 45px;
+    margin-left: -10px;
+    padding-top: 13px;
+    font-size: large;
+  }
+
+  .header__title-explore {
+      background-color: $light-grey;
+      padding-top: 30px;
+      padding-bottom: 55px;
+      text-align: center;
+  }
+
+  .header__title-explore  h1 {
+      font-size: xx-large;
+      margin-right: 50px;
+      margin-left: 50px;
+  }
+
+  .header__title-explore p {
+      font-size: larger;
+      font-weight: 300;
+      color: #6b6b6b;
+      padding-bottom: 20px;
+  }
+
+  .header__btn-explore {
+      border: solid 1px $colour-secondary;
+      background-color: $colour-secondary;
+      border-radius: 28px;
+      width: 240px;
+      height: 55px;
+      box-shadow: 0px 2px 8px #a09e9e;
+      cursor: pointer;
+  }
+
+  .header__btn-explore span {
+      color: white;
+      font-weight: 500;
+      font-size: large;
+  }
+  
+  .fonctionnement {
+    padding-bottom: 50px;
+    &__title {
+        margin-left: 30px;
         font-size: x-large;
-        margin-right: 50px;
-        margin-left: 50px;
+        padding-bottom: 15px;
+        padding-top: 20px;
     }
-
-    .header__title-explore p {
-        font-size: large;
-        font-weight: 300;
-        color: #6b6b6b;
-        padding-bottom: 20px;
-    }
-
-    .header__btn-explore {
-        border: solid 1px $colour-secondary;
-        background-color: $colour-secondary;
-        border-radius: 28px;
-        width: 240px;
-        height: 55px;
-        box-shadow: 0px 2px 8px #a09e9e;
-        cursor: pointer;
-    }
-
-    .header__btn-explore span {
-        color: white;
-        font-weight: 500;
-        font-size: large;
-    }    
-
-    .fonctionnement {
-        padding-bottom: 50px;
-        &__title {
-            margin-left: 20px;
-            font-size: x-large;
-            padding-bottom: 15px;
-            padding-top: 20px;
+        &__etape {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            
         }
-            &__etape {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                gap: 20px;
-                
+            &__etape-numero {
+                border: solid 1px $colour-primary;
+                border-radius: 50%;
+                background-color: $colour-primary;
+                height: 23px;
+                width: 26px;
+                padding-top: 2px;
+                font-size: medium;
+                text-align: center;
+                color: white;
             }
-                &__etape-numero {
-                    border: solid 1px $colour-primary;
-                    border-radius: 50%;
-                    background-color: $colour-primary;
-                    height: 23px;
-                    width: 26px;
-                    padding-top: 2px;
-                    font-size: medium;
-                    text-align: center;
-                    color: white;
-                }
+}
+
+.fonctionnement__body {
+    display: flex;
+    gap: 20px;
+}
+
+.fonctionnement__body i {
+    color: #6b6b6b;
+    font-size: medium;
+}
+
+.fonctionnement__body span {
+    border: solid 1px $light-grey;
+    border-radius: 15px;
+    box-shadow: 1px 2px 15px #d2d2d2;
+    background-color: $light-grey;
+    height:60px;
+    width: 250px;
+    font-weight: 500;
+    font-size: large;
+}
+
+.restaurants {
+    border: solid 1px #f6f6f6;
+    background-color: #f6f6f6;
+    padding-top: 25px;
+    padding-bottom: 70px;
+    &__title {
+        margin-left: 30px;
+        font-size: x-large;
     }
-
-    .fonctionnement__body {
-        display: flex;
-        gap: 20px;
-    }
-
-    .fonctionnement__body i {
-        color: #6b6b6b;
-        font-size: medium;
-    }
-
-    .fonctionnement__body span {
-        border: solid 1px $light-grey;
-        border-radius: 15px;
-        box-shadow: 1px 2px 15px #d2d2d2;
-        background-color: $light-grey;
-        height:60px;
-        width: 250px;
-        font-weight: 500;
-        font-size: large;
-    }
-
-
-    .restaurants {
-        border: solid 1px #f6f6f6;
-        background-color: #f6f6f6;
-        padding-top: 25px;
-        padding-bottom: 70px;
-        &__title {
-            margin-left: 20px;
-            font-size: x-large;
+        &__cards-block {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-left: 60px;
         }
-            &__cards-block {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                gap: 20px;
+            &__cards-block a:hover {
+                transform:scale(1.04);
+                text-size-adjust: auto;
+                transition: 0.3s;
             }
                 &__card {
                     display: block;
@@ -150,7 +185,6 @@
                     background-color: white;
                     text-decoration: none;
                     padding-bottom: 5px;
-                    margin: 0 auto;
                     position: relative;
                 }  
                     &__card img {
@@ -159,63 +193,251 @@
                         border-radius: 20px 20px 0px 0px;
                         object-fit: cover;
                     }
-    }
+}
 
-    .restaurants__new {
-        border: solid 1px $colour-tertiary;
-        background-color: $colour-tertiary;
-        border-radius: 3px;
-        width: 75px;
-        height: 23px;
-        position: absolute;
-        top: 14px;
-        right: 14px;
-        padding-top: 5px;
-        padding-left: 10px;
-        color: darken($colour-tertiary, 40%);
-        font-weight: 500;
-    }
+.restaurants__new {
+    border: solid 1px $colour-tertiary;
+    background-color: $colour-tertiary;
+    border-radius: 3px;
+    width: 75px;
+    height: 23px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding-top: 5px;
+    padding-left: 10px;
+    color: darken($colour-tertiary, 40%);
+    font-weight: 500;
+}
 
-    .restaurants__card-text {
-        margin-left: 15px;
-        line-height: 5px;
-        color: black;
-            & p {
-            font-weight: 300;
+.restaurants__card-text {
+    margin-left: 15px;
+    line-height: 5px;
+    color: black;
+        & p {
+        font-weight: 300;
+        }
+}
+
+.footer {
+    border: solid 1px #353535;
+    background-color: #353535;
+    padding-bottom: 30px;
+        & h3 {
+        padding-top: 10px;
+        font-family: 'Shrikhand', cursive;
+        color: white;
+        font-size: xx-large;
+        text-align: center;
+        }
+            & ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+            color: white;
+            list-style-type: none;
+            font-size: medium;
             }
+                & li {
+                    line-height: 30px;
+                }
+}
+
+
+// Menus
+
+.header_btn-home {
+    color: #353535;
+    font-size: x-large;
+    text-decoration: none;
+    position: absolute;
+    top: 40px;
+    left: 150px;
+}
+
+.menu { 
+    border: solid 1px $light-grey;
+    background-color: $light-grey;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+        & img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        }
+            & h1 {
+                font-family: 'Shrikhand', cursive;
+                font-size: 2.5em;
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+}
+
+.menu h2 {
+    color: black;
+    font-size: larger;
+    font-weight: 350;
+    border: solid 4px $colour-tertiary;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 12%;
+    padding-bottom: 5px;
+    margin-left: 17px;
+}
+
+.menu_cards-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-bottom: 25px;
+}
+
+.menu_card {
+    display: block;
+    width: 330px;
+    height: 65px;
+    box-shadow: 0px 0px 10px 2px #DCDCDC;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 15px;
+    padding-left: 14px;
+    padding-top: 1px;
+    line-height: 8px;
+    position: relative;
+        & h3 {
+            font-size: 105%;
+        }
+            & p {
+                font-size: 92%;
+                font-weight: 300;
+            }
+                & span {
+                    font-weight: bold;
+                    position: absolute;
+                    right: 25px;
+                }
+}
+
+.menu__btn-order {
+    border: solid 1px $colour-secondary;
+    background-color: $colour-secondary;
+    border-radius: 28px;
+    width: 200px;
+    height: 60px;
+    box-shadow: 0px 2px 8px #a09e9e;
+    margin-top: 20px;
+    margin-left: 90px;
+    margin-bottom: 50px;
+    cursor: pointer;
+        & span {
+            color: white;
+            font-weight: 500;
+            font-size: larger;
+        }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    header img {
+    width: 300px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    header img {
+        width: 200px;
+    }
+
+    .header {
+
+        &__form {
+            height: 50px;
+        }
+            &__form input {
+                border: none;
+                background-color: #eaeaea;
+                font-size: large;
+                width: 170px;
+            }
+    }
+
+    .fa-map-marker-alt {
+        border: none;
+        background-color: #eaeaea;
+        font-size: medium;
+    }
+
+    .header__btn-search {
+        display: none;
+    }
+
+    .header__title-explore  h1 {
+        font-size: x-large;
+    }
+
+    .fonctionnement__title {
+        margin-left: 25px;
+        font-size: x-large;
+    }
+
+    .restaurants {
+        &__title {
+            margin-left: 25px;
+            font-size: x-large;
+        }
+            &__cards-block {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 20px;
+                padding-left: 25px;
+                margin: 0 auto;
+            }
+                &__card {
+                    display: block;
+                    width: 325px;
+                }  
+                    &__card img {
+                        width: 100%;
+                        height: 175px;
+                    }
     }
 
     .footer {
-        border: solid 1px #353535;
-        background-color: #353535;
-            & h3 {
-            padding-top: 10px;
-            padding-bottom: 5px;
-            padding-left: 35px;
-            font-family: 'Shrikhand', cursive;
-            color: white;
+        & h3 {
+        padding-left: 35px;
+        font-size: medium;
+        text-align: left;
+        }
+
+            & ul {
+                display: block;
             }
-                & ul {
-                color: white;
-                list-style-type: none;
+                & li {
+                line-height: 30px;
+                font-size: smaller;
                 }
-                    & li {
-                        margin-left: -10px;
-                        line-height: 30px;
+                    & li i {
+                    margin-left: 2px;
                     }
-                        & li i {
-                            font-size: smaller;
-                            margin-left: 2px;
-                        }
 
     }
 
     // Menus 
 
     .header_btn-home {
-        color: #353535;
         font-size: larger;
-        text-decoration: none;
         position: absolute;
         top: 30px;
         left: 20px;
@@ -232,11 +454,11 @@
             object-fit: cover;
             }
                 & h1 {
-                    font-family: 'Shrikhand', cursive;
                     font-size: 1.7em;
                     margin-left: 17px;
                     padding-top: 20px;
                     padding-bottom: 20px;
+                    text-align: left;
                 }
     }
 
@@ -288,18 +510,13 @@
     }
 
     .menu__btn-order {
-        border: solid 1px $colour-secondary;
-        background-color: $colour-secondary;
-        border-radius: 28px;
         width: 180px;
         height: 45px;
-        box-shadow: 0px 2px 8px #a09e9e;
         margin-top: 20px;
         margin-left: 90px;
         margin-bottom: 50px;
         cursor: pointer;
             & span {
-                color: white;
                 font-weight: 500;
                 font-size: large;
             }
