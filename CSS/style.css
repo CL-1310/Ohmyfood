@@ -2,12 +2,6 @@
   font-family: "Roboto";
 }
 
-header img {
-  width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .header__logo {
   display: flex;
   width: 100%;
@@ -19,6 +13,21 @@ header img {
   padding-bottom: 15px;
   padding-top: 25px;
 }
+.header__logo img {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__btn-home {
+  color: #353535;
+  font-size: x-large;
+  text-decoration: none;
+  position: absolute;
+  top: 40px;
+  left: 150px;
+}
+
 .header__form {
   display: flex;
   justify-content: center;
@@ -28,17 +37,7 @@ header img {
   background-color: #eaeaea;
   height: 100px;
 }
-.header__form input {
-  border: solid 1px white;
-  background-color: white;
-  font-size: x-large;
-  font-weight: 500;
-  width: 200px;
-  height: 45px;
-  margin-left: -10px;
-}
-
-.fa-map-marker-alt {
+.header__form .fa-map-marker-alt {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -51,8 +50,16 @@ header img {
   padding-top: 15px;
   font-size: large;
 }
-
-.header__btn-search {
+.header__form input {
+  border: solid 1px white;
+  background-color: white;
+  font-size: x-large;
+  font-weight: 500;
+  width: 200px;
+  height: 45px;
+  margin-left: -10px;
+}
+.header__form .header__form-btn {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -65,46 +72,48 @@ header img {
   margin-left: -10px;
   padding-top: 13px;
   font-size: large;
+  cursor: pointer;
 }
 
-.header__title-explore {
+.header__explore {
   background-color: #f6f6f6;
   padding-top: 30px;
   padding-bottom: 55px;
   text-align: center;
 }
-
-.header__title-explore h1 {
+.header__explore h1 {
   font-size: xx-large;
   margin-right: 50px;
   margin-left: 50px;
 }
-
-.header__title-explore p {
+.header__explore p {
   font-size: larger;
   font-weight: 300;
   color: #6b6b6b;
   padding-bottom: 20px;
 }
-
-.header__btn-explore {
-  border: solid 1px #FF79DA;
-  background-color: #FF79DA;
+.header__explore .header__btn-explore {
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  border: solid 1px rgb(174, 172, 172);
   border-radius: 28px;
   width: 240px;
   height: 55px;
-  box-shadow: 0px 2px 8px #a09e9e;
+  box-shadow: 0px 2px 8px #a9a6a6;
   cursor: pointer;
 }
-
-.header__btn-explore span {
+.header__explore .header__btn-explore:hover {
+  transform: scale(1.05);
+  text-size-adjust: auto;
+  transition: 0.3s;
+}
+.header__explore .header__btn-explore span {
   color: white;
   font-weight: 500;
   font-size: large;
 }
 
 .fonctionnement {
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 .fonctionnement__title {
   margin-left: 30px;
@@ -112,13 +121,39 @@ header img {
   padding-bottom: 15px;
   padding-top: 20px;
 }
-.fonctionnement__etape {
+.fonctionnement__etapes {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 20px;
 }
-.fonctionnement__etape-numero {
+.fonctionnement__etapes .fonctionnement__etape {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 1px 2px 15px #d2d2d2;
+  background-color: #f6f6f6;
+  align-items: center;
+  gap: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 20%;
+  height: 40px;
+  margin: 0 auto 15px auto;
+  font-weight: 500;
+}
+.fonctionnement__etapes .fonctionnement__etape:hover {
+  background-color: #f2eafb;
+  border: #f2eafb;
+  color: black;
+}
+.fonctionnement__etapes .fonctionnement__etape i {
+  color: grey;
+  font-size: large;
+}
+.fonctionnement__etapes .fonctionnement__etape i:hover {
+  color: #9356DC;
+}
+.fonctionnement__etapes .fonctionnement__etape-numero {
   border: solid 1px #9356DC;
   border-radius: 50%;
   background-color: #9356DC;
@@ -128,27 +163,7 @@ header img {
   font-size: medium;
   text-align: center;
   color: white;
-}
-
-.fonctionnement__body {
-  display: flex;
-  gap: 20px;
-}
-
-.fonctionnement__body i {
-  color: #6b6b6b;
-  font-size: medium;
-}
-
-.fonctionnement__body span {
-  border: solid 1px #f6f6f6;
-  border-radius: 15px;
-  box-shadow: 1px 2px 15px #d2d2d2;
-  background-color: #f6f6f6;
-  height: 60px;
-  width: 250px;
-  font-weight: 500;
-  font-size: large;
+  margin-left: -10px;
 }
 
 .restaurants {
@@ -189,7 +204,6 @@ header img {
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
 }
-
 .restaurants__new {
   border: solid 1px #99E2D0;
   background-color: #99E2D0;
@@ -204,7 +218,6 @@ header img {
   color: #278870;
   font-weight: 500;
 }
-
 .restaurants__card-text {
   margin-left: 15px;
   line-height: 5px;
@@ -233,55 +246,55 @@ header img {
   gap: 50px;
   color: white;
   list-style-type: none;
-  font-size: medium;
+  font-size: large;
 }
-.footer li {
+.footer ul li {
   line-height: 30px;
+  font-size: 14px;
+}
+.footer ul li i {
+  font-size: 12px;
 }
 
-.header_btn-home {
-  color: #353535;
-  font-size: x-large;
-  text-decoration: none;
-  position: absolute;
-  top: 40px;
-  left: 150px;
+.container__menu img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  z-index: -10;
+  position: relative;
 }
-
-.menu {
+.container__menu .menu {
   border: solid 1px #f6f6f6;
   background-color: #f6f6f6;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  margin-top: -40px;
+  padding-bottom: 100px;
 }
-.menu img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-}
-.menu h1 {
+.container__menu .menu h1 {
   font-family: "Shrikhand", cursive;
   font-size: 2.5em;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
-.menu h2 {
+.container__menu .menu__title {
+  width: 40%;
+  margin: 0 auto;
+}
+.container__menu .menu__title h2 {
   font-weight: 350;
   border: solid 4px #99E2D0;
   border-top: none;
   border-right: none;
   border-left: none;
-  width: 3%;
+  width: 8%;
   padding-bottom: 5px;
   margin-bottom: 20px;
-  margin-left: 540px;
   color: black;
   font-size: larger;
 }
-
-.menu_cards-block {
+.container__menu .menu__cards-block {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -289,11 +302,12 @@ header img {
   align-items: center;
   gap: 15px;
   padding-bottom: 25px;
+  width: 40%;
+  margin: 0 auto;
 }
-
-.menu_card {
+.container__menu .menu__cards-block .menu__card {
   display: block;
-  width: 450px;
+  width: 100%;
   height: 80px;
   box-shadow: 0px 0px 10px 2px #DCDCDC;
   border-radius: 20px;
@@ -303,32 +317,38 @@ header img {
   line-height: 8px;
   position: relative;
 }
-.menu_card h3 {
+.container__menu .menu__cards-block .menu__card h3 {
   font-size: larger;
 }
-.menu_card p {
+.container__menu .menu__cards-block .menu__card p {
   font-size: medium;
   font-weight: 300;
+  word-break: break-all;
+  text-overflow: ellipsis;
 }
-.menu_card span {
+.container__menu .menu__cards-block .menu__card span {
   font-weight: bold;
   position: absolute;
   right: 25px;
 }
-
-.menu__btn-order {
-  border: solid 1px #FF79DA;
-  background-color: #FF79DA;
+.container__menu .menu__btn-order {
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  border: solid 1px rgb(174, 172, 172);
   border-radius: 28px;
-  width: 200px;
+  width: 210px;
   height: 60px;
   box-shadow: 0px 2px 8px #a09e9e;
-  margin-top: 20px;
-  margin-left: 650px;
-  margin-bottom: 50px;
+  margin-top: 40px;
   cursor: pointer;
+  position: relative;
+  left: 650px;
 }
-.menu__btn-order span {
+.container__menu .menu__btn-order:hover {
+  transform: scale(1.05);
+  text-size-adjust: auto;
+  transition: 0.3s;
+}
+.container__menu .menu__btn-order span {
   color: white;
   font-weight: 500;
   font-size: larger;
@@ -339,47 +359,69 @@ header img {
     width: 300px;
   }
 
-  .menu__btn-order {
-    margin-left: 300px;
+  .fonctionnement__etapes {
+    display: flex;
+    flex-direction: column;
+  }
+  .fonctionnement__etapes .fonctionnement__etape {
+    width: 40%;
+    margin: 0 auto 30px auto;
   }
 
-  .menu h2 {
-    margin-left: 180px;
-    width: 45px;
+  .container__menu .menu__title {
+    width: 70%;
+  }
+  .container__menu .menu__cards-block {
+    width: 70%;
+  }
+  .container__menu .menu__btn-order {
+    left: 300px;
   }
 }
 @media (max-width: 767px) {
-  header img {
+  .header__logo img {
     width: 200px;
   }
-
   .header__form {
     height: 50px;
-  }
-  .header__form input {
     border: none;
     background-color: #eaeaea;
-    font-size: large;
-    width: 170px;
   }
-
-  .fa-map-marker-alt {
+  .header__form .fa-map-marker-alt {
     border: none;
     background-color: #eaeaea;
     font-size: medium;
   }
-
-  .header__btn-search {
+  .header__form input {
+    font-size: large;
+    width: 170px;
+    background-color: #eaeaea;
+    border: none;
+  }
+  .header__form .header__form-btn {
     display: none;
+    border: none;
+    background-color: #eaeaea;
   }
 
-  .header__title-explore h1 {
+  .header__explore h1 {
     font-size: x-large;
+  }
+  .header__explore .header__btn-explore span {
+    font-size: medium;
   }
 
   .fonctionnement__title {
     margin-left: 25px;
     font-size: x-large;
+  }
+  .fonctionnement__etapes {
+    display: flex;
+    flex-direction: column;
+  }
+  .fonctionnement__etapes .fonctionnement__etape {
+    width: 85%;
+    margin: 0 auto 30px auto;
   }
 
   .restaurants__title {
@@ -394,67 +436,62 @@ header img {
     padding-left: 25px;
     margin: 0 auto;
   }
-  .restaurants__card {
+  .restaurants__cards-block__card {
     display: block;
     width: 325px;
   }
-  .restaurants__card img {
+  .restaurants__cards-block__card__card img {
     width: 100%;
     height: 175px;
   }
 
   .footer h3 {
+    text-align: left;
     padding-left: 35px;
     font-size: medium;
-    text-align: left;
   }
-  .footer ul {
-    display: block;
+  .footer h3 ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
-  .footer li {
-    line-height: 30px;
+  .footer h3 ul li {
     font-size: smaller;
   }
-  .footer li i {
+  .footer h3 ul li i {
     margin-left: 2px;
   }
 
-  .header_btn-home {
+  .header__btn-home {
     font-size: larger;
     position: absolute;
     top: 30px;
     left: 20px;
   }
 
-  .menu img {
-    width: 100%;
-    height: 260px;
-  }
-  .menu h1 {
+  .container__menu .menu h1 {
     font-size: 1.7em;
     margin-left: 17px;
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: left;
   }
-
-  .menu h2 {
+  .container__menu .menu h2 {
     font-size: large;
     font-weight: 350;
     width: 12%;
     padding-bottom: 5px;
     margin-left: 17px;
   }
-
-  .menu_cards-block {
+  .container__menu .menu__cards-block {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 15px;
     padding-bottom: 25px;
   }
-
-  .menu_card {
+  .container__menu .menu__cards-block .menu__card {
     display: block;
     width: 330px;
     height: 65px;
@@ -463,25 +500,24 @@ header img {
     padding-top: 1px;
     position: relative;
   }
-  .menu_card h3 {
+  .container__menu .menu__cards-block .menu__card h3 {
     font-size: 105%;
   }
-  .menu_card p {
+  .container__menu .menu__cards-block .menu__card p {
     font-size: 92%;
     font-weight: 300;
   }
-  .menu_card span {
+  .container__menu .menu__cards-block .menu__card p span {
     font-weight: bold;
     position: absolute;
     right: 25px;
   }
-
-  .menu__btn-order {
+  .container__menu .menu__btn-order {
     width: 180px;
     height: 45px;
     margin-left: 90px;
   }
-  .menu__btn-order span {
+  .container__menu .menu__btn-order span {
     font-weight: 500;
     font-size: large;
   }
