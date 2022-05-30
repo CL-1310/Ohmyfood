@@ -1,0 +1,136 @@
+.container__menu {
+    img {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        z-index: -10;
+        position: relative;
+    } 
+    .menu { 
+        border: solid 1px $light-grey;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        margin-top: -40px;
+        padding-bottom: 100px;
+        & h1 {
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &__title {
+            width: 40%;
+            margin: 0 auto;
+                h2 {
+                    border: solid 4px $colour-tertiary;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    width: 8%;
+                    padding-bottom: 5px;
+                    margin-bottom: 20px;
+                }
+        }
+        &__cards-block {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 25px;
+            width: 40%;
+            margin: 0 auto;
+                .menu__card {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 80px;
+                    box-shadow: 0px 0px 10px 2px #DCDCDC;
+                    border-radius: 20px;
+                    padding-left: 14px;
+                    padding-top: 5px;
+                        .check {
+                            width: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                             i{
+                                 opacity: 0;
+                             }
+                        }
+                        &:hover {
+                            .check {
+                                width: 30%;
+                                i{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                }
+        }
+    }   
+
+}
+
+// Responsive tablettes
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    .container__menu {
+        .menu {
+            &__title {
+                width: 70%;
+            }
+            &__cards-block {
+                width: 70%;
+            }
+            &__btn-order {
+                left: 300px;
+            }
+        }
+    }
+
+}
+
+// Responsive smartphones
+
+@media (max-width: 767px) {
+
+    .container__menu { 
+        .menu {
+            h1 {
+                margin-left: 17px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align: left;
+            }
+            h2 {
+                width: 12%;
+                padding-bottom: 5px;
+                margin-left: 17px;
+            }
+            &__cards-block {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 15px;
+                padding-bottom: 25px;
+                    .menu__card {
+                        display: block;
+                        width: 330px;
+                        height: 65px;
+                        margin: 0 auto;
+                        padding-left: 14px;
+                        padding-top: 1px;
+                        position: relative;
+                            p span {
+                                position: absolute;
+                                right: 25px;
+                            }
+
+                    }
+            }
+        }
+    }
+}

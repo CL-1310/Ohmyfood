@@ -1,0 +1,228 @@
+// Contient : couleurs, couleurs de fond, polices d'écriture, tailles et épaisseurs des polices
+
+* {
+    font-family: 'Roboto';
+}
+
+.header__explore {
+    background-color: $light-grey;
+        h1 {
+            font-size: xx-large;
+        }
+        p {
+            font-size: larger;
+            font-weight: 300;
+            color: #6b6b6b;
+        }
+}
+
+.header__btn-explore {
+    @include btn-gradient;
+}
+
+.fonctionnement {
+    &__title {
+        font-size: x-large;
+    }
+    &__etapes {
+        .fonctionnement__etape {
+            background-color: $light-grey;
+            font-weight: 500;
+                &:hover {
+                    background-color: lighten($colour-primary,35);
+                    color: black;
+                        i {
+                            color: $colour-primary;
+                        }
+                }
+                i {
+                    color: grey;
+                    font-size: large;
+                }
+        }
+        .fonctionnement__etape-numero {
+            font-size: medium;
+            color: white;
+        }
+    }
+}
+
+.restaurants {
+    background-color: #f6f6f6;
+        &__title {
+            font-size: x-large;
+        }
+        &__cards-block a:hover {
+            color: black;
+        }
+            &__card {
+                background-color: white;
+                text-decoration: none;
+                    &:visited {
+                        color: black;
+                    }
+            }  
+            &__new {
+                background-color: $colour-tertiary;
+                color: darken($colour-tertiary, 40%);
+                font-weight: 500;
+            }
+            &__card-body {
+                .restaurants__card-text {
+                    line-height: 5px;
+                    color: black;
+                        p {
+                            font-weight: 300;
+                        }
+                }
+            }
+}
+
+.footer {
+    background-color: #353535;
+        & h3 {
+        font-family: 'Shrikhand', cursive;
+        color: white;
+        font-size: xx-large;
+        }
+            & ul {
+                color: white;
+                list-style-type: none;
+                font-size: large;
+                li {
+                    line-height: 30px;
+                    font-size: 14px;
+                    i {
+                        font-size: 12px;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }    
+}
+
+.container__menu {
+    .menu { 
+        background-color: $light-grey;
+        & h1 {
+            font-family: 'Shrikhand', cursive;
+            font-size: 2.5em;
+        }
+        &__title {
+            h2 {
+                font-weight: 350;
+                color: black;
+                font-size: larger;
+            }
+        }
+        &__cards-block {
+            .menu__card {
+                background-color: white;
+                line-height: 8px;
+                    h3 {
+                        font-size: larger;
+                    }
+                        p {
+                            font-size: medium;
+                            font-weight: 300;
+                            word-break: break-all;
+                            text-overflow: ellipsis;
+                        }
+                            span {
+                                font-weight: bold;
+                            }
+            }
+        }
+        &__btn-order {
+            @include btn-gradient;
+            cursor: pointer;
+                span {
+                    color: white;
+                    font-weight: 500;
+                    font-size: larger;
+                }
+        
+        }
+    }   
+
+}
+
+// Responsive smartphones
+
+@media screen and (max-width: 767px) {
+
+    .header__explore {
+        h1 {
+            font-size: x-large;
+        }
+        .header__btn-explore span {
+            font-size: medium;
+        }
+    } 
+
+    .fonctionnement {
+        &__title {
+            font-size: x-large;
+        }
+    }
+    .restaurants {
+        &__title {
+            font-size: x-large;
+        }
+    }
+
+    .footer {
+        h3 {
+        font-size: medium;
+
+            ul {
+                li {
+                    font-size: smaller;
+                }
+            }
+        }
+
+    }
+
+    // Menus 
+
+    .header__btn-home {
+        font-size: larger;
+    }
+
+    .container__menu { 
+        .menu {
+            h1 {
+                font-size: 1.7em;
+            }
+            h2 {
+                font-size: large;
+                font-weight: 350;
+            }
+            &__cards-block {
+                    .menu__card {
+                            h3 {
+                                font-size: 105%;
+                            }
+                            p {
+                                font-size: 92%;
+                                font-weight: 300;
+                                    span {
+                                        font-weight: bold;
+                                    }
+                            }
+                    }
+            }
+            &__btn-order {
+                    span {
+                        font-weight: 500;
+                        font-size: large;
+                    }
+            }
+        }
+
+    }
+
+}

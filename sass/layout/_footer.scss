@@ -1,0 +1,14 @@
+.footer {
+    border: solid 1px #353535;
+    padding-bottom: 30px;
+        & h3 {
+        padding-top: 10px;
+        text-align: center;
+        }
+            & ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 50px;
+            }    
+}
