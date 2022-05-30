@@ -6,11 +6,13 @@
     width: 240px;
     height: 55px;
     box-shadow: 0px 2px 8px #a9a6a6;
+    cursor: pointer;
         &:hover {
             background-image: linear-gradient(to bottom, lighten($colour-secondary,5%), lighten($colour-primary,5%));
             transform:scale(1.05);
             text-size-adjust: auto;
             transition: 0.3s;
+            box-shadow: 0px 2px 8px #848282;
         }
         span {
             color: white;
@@ -40,10 +42,11 @@
     box-shadow: 0px 2px 8px #a09e9e;
     margin-top: 40px;
         &:hover {
-            background-image: linear-gradient(to bottom, lighten($colour-secondary,5%), lighten($colour-primary,5%));
+            background-image: linear-gradient(to bottom, lighten($colour-secondary,50), lighten($colour-primary,50));
             transform:scale(1.05);
             text-size-adjust: auto;
             transition: 0.3s;
+            box-shadow: 0px 2px 8px #848282;
         }
 }
 

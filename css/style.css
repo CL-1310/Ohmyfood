@@ -20,7 +20,7 @@
   left: 0;
   bottom: 0;
   transform: scale(0);
-  transition: transform 1000ms ease-out;
+  transition: transform 500ms ease-out;
 }
 
 .header__btn-explore {
@@ -29,12 +29,14 @@
   width: 240px;
   height: 55px;
   box-shadow: 0px 2px 8px #a9a6a6;
+  cursor: pointer;
 }
 .header__btn-explore:hover {
   background-image: linear-gradient(to bottom, #ff93e1, #a16be0);
   transform: scale(1.05);
   text-size-adjust: auto;
   transition: 0.3s;
+  box-shadow: 0px 2px 8px #848282;
 }
 .header__btn-explore span {
   color: white;
@@ -60,10 +62,11 @@
   margin-top: 40px;
 }
 .menu__btn-order:hover {
-  background-image: linear-gradient(to bottom, #ff93e1, #a16be0);
+  background-image: linear-gradient(to bottom, white, white);
   transform: scale(1.05);
   text-size-adjust: auto;
   transition: 0.3s;
+  box-shadow: 0px 2px 8px #848282;
 }
 
 @media (max-width: 767px) {
@@ -651,6 +654,157 @@
   flex-direction: row;
   justify-content: center;
   gap: 50px;
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.loading-spinner .dot {
+  background: black;
+  border-radius: 100%;
+  color: white;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  width: 14px;
+  transition: ease-out 10000ms;
+}
+.loading-spinner .dot-one {
+  -webkit-animation: dotOneKeyframes 5s ease infinite;
+  background: #9356DC;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.loading-spinner .dot-two {
+  -webkit-animation: dotTwoKeyframes 5s ease 0.4166666667s infinite;
+  background: #FF79DA;
+  position: absolute;
+  top: 0;
+  left: 14px;
+}
+.loading-spinner .dot-three {
+  -webkit-animation: dotThreeKeyframes 5s ease 0.8333333333s infinite;
+  background: #99E2D0;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+.loading-spinner .website-title {
+  font-family: "Shrikhand", cursive;
+  color: black;
+  font-size: 300%;
+  position: absolute;
+  bottom: 30px;
+  left: -120px;
+}
+
+@-webkit-keyframes dotOneKeyframes {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  8.3333333333% {
+    top: 14px;
+    left: 0;
+  }
+  25% {
+    top: 14px;
+    left: 0;
+  }
+  33.3333333333% {
+    top: 14px;
+    left: 14px;
+  }
+  50% {
+    top: 14px;
+    left: 14px;
+  }
+  58.3333333333% {
+    top: 0;
+    left: 14px;
+  }
+  75% {
+    top: 0;
+    left: 14px;
+  }
+  83.3333333333% {
+    top: 0;
+    left: 0;
+  }
+}
+@-webkit-keyframes dotTwoKeyframes {
+  0% {
+    top: 0;
+    left: 14px;
+  }
+  8.3333333333% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 0;
+  }
+  33.3333333333% {
+    top: 14px;
+    left: 0;
+  }
+  50% {
+    top: 14px;
+    left: 0;
+  }
+  58.3333333333% {
+    top: 14px;
+    left: 14px;
+  }
+  75% {
+    top: 14px;
+    left: 14px;
+  }
+  83.3333333333% {
+    top: 0;
+    left: 14px;
+  }
+}
+@-webkit-keyframes dotThreeKeyframes {
+  0% {
+    top: 14px;
+    left: 14px;
+  }
+  8.3333333333% {
+    top: 0;
+    left: 14px;
+  }
+  25% {
+    top: 0;
+    left: 14px;
+  }
+  33.3333333333% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: 0;
+    left: 0;
+  }
+  58.3333333333% {
+    top: 14px;
+    left: 0;
+  }
+  75% {
+    top: 14px;
+    left: 0;
+  }
+  83.3333333333% {
+    top: 14px;
+    left: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
