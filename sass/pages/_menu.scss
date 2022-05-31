@@ -17,6 +17,15 @@
             padding-top: 20px;
             padding-bottom: 20px;
         }
+        &__entrees {
+            animation: menu-block 2000ms;
+        }
+        &__plats {
+            animation: menu-block 3000ms;
+        }
+        &__desserts {
+            animation: menu-block 4000ms;
+        }
         &__title {
             width: 40%;
             margin: 0 auto;
@@ -55,6 +64,8 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            color: white;
+                            background-color: $colour-tertiary;
                              i{
                                  opacity: 0;
                              }
@@ -71,6 +82,17 @@
         }
     }   
 
+}
+
+@keyframes menu-block {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 // Responsive tablettes

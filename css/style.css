@@ -265,6 +265,15 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.container__menu .menu__entrees {
+  animation: menu-block 2000ms;
+}
+.container__menu .menu__plats {
+  animation: menu-block 3000ms;
+}
+.container__menu .menu__desserts {
+  animation: menu-block 4000ms;
+}
 .container__menu .menu__title {
   width: 40%;
   margin: 0 auto;
@@ -305,6 +314,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  background-color: #99E2D0;
 }
 .container__menu .menu__cards-block .menu__card .check i {
   opacity: 0;
@@ -316,6 +327,16 @@
   opacity: 1;
 }
 
+@keyframes menu-block {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .container__menu .menu__title {
     width: 70%;
