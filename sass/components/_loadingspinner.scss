@@ -1,4 +1,19 @@
+.site {
+    animation: site-appear 5550ms;
+}
+
+@keyframes site-appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .loading-spinner {
+    animation: loading-disappear 5550ms;
+    visibility: hidden;
     position : absolute;
     top      : 50%;
     left     : 50%;
@@ -46,10 +61,6 @@
             }
               
 }
-
-// .website-title {
-//     display: none;
-// }
   
 @-webkit-keyframes dotOneKeyframes {
 0% {
@@ -200,4 +211,15 @@
 100% {
     
 }
+}
+
+@keyframes loading-disappear {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
 }

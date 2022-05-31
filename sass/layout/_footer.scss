@@ -10,5 +10,22 @@
                 flex-direction: row;
                 justify-content: center;
                 gap: 50px;
+                cursor: pointer;
             }    
+}
+
+// Responsive smartphones
+
+@media screen and (max-width: 767px) {
+
+    .footer {
+        h3 {
+        text-align: left;
+        }
+            & ul {
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+            }    
+    }
 }
