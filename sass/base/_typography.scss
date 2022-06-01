@@ -136,13 +136,11 @@
             }
         }
         &__btn-order {
-            @include btn-gradient;
-            cursor: pointer;
-                span {
-                    color: white;
-                    font-weight: 500;
-                    font-size: larger;
-                }
+            span {
+                color: white;
+                font-weight: 500;
+                font-size: larger;
+            }
         
         }
     }   

@@ -1,5 +1,5 @@
 .site {
-    animation: site-appear 5550ms;
+    animation: site-appear 5550ms forwards;
 }
 
 @keyframes site-appear {
@@ -12,7 +12,7 @@
 }
 
 .loading-spinner {
-    animation: loading-disappear 5550ms;
+    animation: loading-disappear 5550ms forwards;
     visibility: hidden;
     position : absolute;
     top      : 50%;

@@ -1,3 +1,183 @@
+* {
+  font-family: "Roboto";
+}
+
+.header__explore {
+  background-color: #f6f6f6;
+}
+.header__explore h1 {
+  font-size: xx-large;
+}
+.header__explore p {
+  font-size: larger;
+  font-weight: 300;
+  color: #6b6b6b;
+}
+
+.header__btn-explore {
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+}
+
+.fonctionnement__title {
+  font-size: x-large;
+}
+.fonctionnement__etapes .fonctionnement__etape {
+  background-color: #f6f6f6;
+  font-weight: 500;
+}
+.fonctionnement__etapes .fonctionnement__etape:hover {
+  background-color: #f2eafb;
+  color: black;
+}
+.fonctionnement__etapes .fonctionnement__etape:hover i {
+  color: #9356DC;
+}
+.fonctionnement__etapes .fonctionnement__etape i {
+  color: grey;
+  font-size: large;
+}
+.fonctionnement__etapes .fonctionnement__etape-numero {
+  font-size: medium;
+  color: white;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+}
+.restaurants__title {
+  font-size: x-large;
+}
+.restaurants__cards-block a:hover {
+  color: black;
+}
+.restaurants__card {
+  background-color: white;
+  text-decoration: none;
+}
+.restaurants__card:visited {
+  color: black;
+}
+.restaurants__new {
+  background-color: #99E2D0;
+  color: #278870;
+  font-weight: 500;
+}
+.restaurants__card-body .restaurants__card-text {
+  line-height: 5px;
+  color: black;
+}
+.restaurants__card-body .restaurants__card-text p {
+  font-weight: 300;
+}
+
+.footer {
+  background-color: #353535;
+}
+.footer h3 {
+  font-family: "Shrikhand", cursive;
+  color: white;
+  font-size: xx-large;
+}
+.footer ul {
+  color: white;
+  list-style-type: none;
+  font-size: large;
+}
+.footer ul li {
+  line-height: 30px;
+  font-size: 14px;
+}
+.footer ul li i {
+  font-size: 12px;
+}
+.footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.container__menu .menu {
+  background-color: #f6f6f6;
+}
+.container__menu .menu h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.5em;
+}
+.container__menu .menu__title h2 {
+  font-weight: 350;
+  color: black;
+  font-size: larger;
+}
+.container__menu .menu__cards-block .menu__card {
+  background-color: white;
+  line-height: 8px;
+}
+.container__menu .menu__cards-block .menu__card h3 {
+  font-size: larger;
+}
+.container__menu .menu__cards-block .menu__card p {
+  font-size: medium;
+  font-weight: 300;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+.container__menu .menu__cards-block .menu__card span {
+  font-weight: bold;
+}
+.container__menu .menu__btn-order span {
+  color: white;
+  font-weight: 500;
+  font-size: larger;
+}
+
+@media screen and (max-width: 767px) {
+  .header__explore h1 {
+    font-size: x-large;
+  }
+  .header__explore .header__btn-explore span {
+    font-size: medium;
+  }
+
+  .fonctionnement__title {
+    font-size: x-large;
+  }
+
+  .restaurants__title {
+    font-size: x-large;
+  }
+
+  .footer h3 {
+    font-size: 120%;
+  }
+  .footer h3 ul li {
+    font-size: smaller;
+  }
+
+  .header__btn-home {
+    font-size: larger;
+  }
+
+  .container__menu .menu h1 {
+    font-size: 1.7em;
+  }
+  .container__menu .menu h2 {
+    font-size: large;
+    font-weight: 350;
+  }
+  .container__menu .menu__cards-block .menu__card h3 {
+    font-size: 105%;
+  }
+  .container__menu .menu__cards-block .menu__card p {
+    font-size: 92%;
+    font-weight: 300;
+  }
+  .container__menu .menu__cards-block .menu__card p span {
+    font-weight: bold;
+  }
+  .container__menu .menu__btn-order span {
+    font-weight: 500;
+    font-size: large;
+  }
+}
 .restaurants__card-heart .empty {
   color: black;
   position: relative;
@@ -86,9 +266,11 @@
   box-shadow: 0px 2px 8px #a09e9e;
   margin-top: 40px;
   margin-bottom: -20px;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  cursor: pointer;
 }
 .menu__btn-order:hover {
-  background-image: linear-gradient(to bottom, #fface8, #ae80e5);
+  background-image: linear-gradient(to bottom, #ff93e1, #a16be0);
   transform: scale(1.05);
   text-size-adjust: auto;
   transition: 0.3s;
@@ -106,6 +288,303 @@
     position: absolute;
     top: 30px;
     left: 20px;
+  }
+}
+.site {
+  animation: site-appear 5550ms forwards;
+}
+
+@keyframes site-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loading-spinner {
+  animation: loading-disappear 5550ms forwards;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.loading-spinner .dot {
+  background: black;
+  border-radius: 100%;
+  color: white;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  width: 14px;
+  transition: ease-out 10000ms;
+}
+.loading-spinner .dot-one {
+  -webkit-animation: dotOneKeyframes 5s ease infinite;
+  background: #9356DC;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.loading-spinner .dot-two {
+  -webkit-animation: dotTwoKeyframes 5s ease 0.4166666667s infinite;
+  background: #FF79DA;
+  position: absolute;
+  top: 0;
+  left: 14px;
+}
+.loading-spinner .dot-three {
+  -webkit-animation: dotThreeKeyframes 5s ease 0.8333333333s infinite;
+  background: #99E2D0;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+.loading-spinner .website-title {
+  font-family: "Shrikhand", cursive;
+  color: black;
+  font-size: 300%;
+  position: absolute;
+  bottom: 30px;
+  left: -120px;
+}
+
+@-webkit-keyframes dotOneKeyframes {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  8.3333333333% {
+    top: 14px;
+    left: 0;
+  }
+  25% {
+    top: 14px;
+    left: 0;
+  }
+  33.3333333333% {
+    top: 14px;
+    left: 14px;
+  }
+  50% {
+    top: 14px;
+    left: 14px;
+  }
+  58.3333333333% {
+    top: 0;
+    left: 14px;
+  }
+  75% {
+    top: 0;
+    left: 14px;
+  }
+  83.3333333333% {
+    top: 0;
+    left: 0;
+  }
+}
+@-webkit-keyframes dotTwoKeyframes {
+  0% {
+    top: 0;
+    left: 14px;
+  }
+  8.3333333333% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 0;
+  }
+  33.3333333333% {
+    top: 14px;
+    left: 0;
+  }
+  50% {
+    top: 14px;
+    left: 0;
+  }
+  58.3333333333% {
+    top: 14px;
+    left: 14px;
+  }
+  75% {
+    top: 14px;
+    left: 14px;
+  }
+  83.3333333333% {
+    top: 0;
+    left: 14px;
+  }
+}
+@-webkit-keyframes dotThreeKeyframes {
+  0% {
+    top: 14px;
+    left: 14px;
+  }
+  8.3333333333% {
+    top: 0;
+    left: 14px;
+  }
+  25% {
+    top: 0;
+    left: 14px;
+  }
+  33.3333333333% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: 0;
+    left: 0;
+  }
+  58.3333333333% {
+    top: 14px;
+    left: 0;
+  }
+  75% {
+    top: 14px;
+    left: 0;
+  }
+  83.3333333333% {
+    top: 14px;
+    left: 14px;
+  }
+}
+@keyframes loading-disappear {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.header__logo {
+  display: flex;
+  width: 100%;
+  border: solid, 5px, white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: 0px 4px 10px #d2d2d2;
+  padding-bottom: 15px;
+  padding-top: 25px;
+}
+.header__logo img {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  header img {
+    width: 300px;
+  }
+}
+@media (max-width: 767px) {
+  .header__logo img {
+    width: 200px;
+  }
+}
+.header__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  background-color: #eaeaea;
+  height: 100px;
+}
+.header__form .fa-map-marker-alt {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: solid 1px white;
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 40px;
+  height: 29px;
+  padding-top: 15px;
+  font-size: large;
+}
+.header__form input {
+  border: solid 1px white;
+  background-color: white;
+  font-size: x-large;
+  font-weight: 500;
+  width: 200px;
+  height: 45px;
+  margin-left: -10px;
+}
+.header__form .header__form-btn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: solid 1px white;
+  background-color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 50px;
+  height: 45px;
+  margin-left: -10px;
+  padding-top: 13px;
+  font-size: large;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .header__form {
+    height: 50px;
+    border: none;
+    background-color: #eaeaea;
+  }
+  .header__form .fa-map-marker-alt {
+    border: none;
+    background-color: #eaeaea;
+    font-size: medium;
+  }
+  .header__form input {
+    width: 170px;
+    border: none;
+    background-color: #eaeaea;
+    font-size: large;
+  }
+  .header__form .header__form-btn {
+    display: none;
+    border: none;
+    background-color: #eaeaea;
+  }
+}
+.footer {
+  border: solid 1px #353535;
+  padding-bottom: 30px;
+}
+.footer h3 {
+  padding-top: 10px;
+  text-align: center;
+}
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .footer h3 {
+    text-align: left;
+  }
+  .footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
   }
 }
 .header__explore {
@@ -432,487 +911,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis "caviar";
-  }
-}
-* {
-  font-family: "Roboto";
-}
-
-.header__explore {
-  background-color: #f6f6f6;
-}
-.header__explore h1 {
-  font-size: xx-large;
-}
-.header__explore p {
-  font-size: larger;
-  font-weight: 300;
-  color: #6b6b6b;
-}
-
-.header__btn-explore {
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-}
-
-.fonctionnement__title {
-  font-size: x-large;
-}
-.fonctionnement__etapes .fonctionnement__etape {
-  background-color: #f6f6f6;
-  font-weight: 500;
-}
-.fonctionnement__etapes .fonctionnement__etape:hover {
-  background-color: #f2eafb;
-  color: black;
-}
-.fonctionnement__etapes .fonctionnement__etape:hover i {
-  color: #9356DC;
-}
-.fonctionnement__etapes .fonctionnement__etape i {
-  color: grey;
-  font-size: large;
-}
-.fonctionnement__etapes .fonctionnement__etape-numero {
-  font-size: medium;
-  color: white;
-}
-
-.restaurants {
-  background-color: #f6f6f6;
-}
-.restaurants__title {
-  font-size: x-large;
-}
-.restaurants__cards-block a:hover {
-  color: black;
-}
-.restaurants__card {
-  background-color: white;
-  text-decoration: none;
-}
-.restaurants__card:visited {
-  color: black;
-}
-.restaurants__new {
-  background-color: #99E2D0;
-  color: #278870;
-  font-weight: 500;
-}
-.restaurants__card-body .restaurants__card-text {
-  line-height: 5px;
-  color: black;
-}
-.restaurants__card-body .restaurants__card-text p {
-  font-weight: 300;
-}
-
-.footer {
-  background-color: #353535;
-}
-.footer h3 {
-  font-family: "Shrikhand", cursive;
-  color: white;
-  font-size: xx-large;
-}
-.footer ul {
-  color: white;
-  list-style-type: none;
-  font-size: large;
-}
-.footer ul li {
-  line-height: 30px;
-  font-size: 14px;
-}
-.footer ul li i {
-  font-size: 12px;
-}
-.footer ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-.container__menu .menu {
-  background-color: #f6f6f6;
-}
-.container__menu .menu h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 2.5em;
-}
-.container__menu .menu__title h2 {
-  font-weight: 350;
-  color: black;
-  font-size: larger;
-}
-.container__menu .menu__cards-block .menu__card {
-  background-color: white;
-  line-height: 8px;
-}
-.container__menu .menu__cards-block .menu__card h3 {
-  font-size: larger;
-}
-.container__menu .menu__cards-block .menu__card p {
-  font-size: medium;
-  font-weight: 300;
-  word-break: break-all;
-  text-overflow: ellipsis;
-}
-.container__menu .menu__cards-block .menu__card span {
-  font-weight: bold;
-}
-.container__menu .menu__btn-order {
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-  cursor: pointer;
-}
-.container__menu .menu__btn-order span {
-  color: white;
-  font-weight: 500;
-  font-size: larger;
-}
-
-@media screen and (max-width: 767px) {
-  .header__explore h1 {
-    font-size: x-large;
-  }
-  .header__explore .header__btn-explore span {
-    font-size: medium;
-  }
-
-  .fonctionnement__title {
-    font-size: x-large;
-  }
-
-  .restaurants__title {
-    font-size: x-large;
-  }
-
-  .footer h3 {
-    font-size: 120%;
-  }
-  .footer h3 ul li {
-    font-size: smaller;
-  }
-
-  .header__btn-home {
-    font-size: larger;
-  }
-
-  .container__menu .menu h1 {
-    font-size: 1.7em;
-  }
-  .container__menu .menu h2 {
-    font-size: large;
-    font-weight: 350;
-  }
-  .container__menu .menu__cards-block .menu__card h3 {
-    font-size: 105%;
-  }
-  .container__menu .menu__cards-block .menu__card p {
-    font-size: 92%;
-    font-weight: 300;
-  }
-  .container__menu .menu__cards-block .menu__card p span {
-    font-weight: bold;
-  }
-  .container__menu .menu__btn-order span {
-    font-weight: 500;
-    font-size: large;
-  }
-}
-.header__logo {
-  display: flex;
-  width: 100%;
-  border: solid, 5px, white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  box-shadow: 0px 4px 10px #d2d2d2;
-  padding-bottom: 15px;
-  padding-top: 25px;
-}
-.header__logo img {
-  width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  header img {
-    width: 300px;
-  }
-}
-@media (max-width: 767px) {
-  .header__logo img {
-    width: 200px;
-  }
-}
-.header__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 4px;
-  background-color: #eaeaea;
-  height: 100px;
-}
-.header__form .fa-map-marker-alt {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border: solid 1px white;
-  background-color: white;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  width: 40px;
-  height: 29px;
-  padding-top: 15px;
-  font-size: large;
-}
-.header__form input {
-  border: solid 1px white;
-  background-color: white;
-  font-size: x-large;
-  font-weight: 500;
-  width: 200px;
-  height: 45px;
-  margin-left: -10px;
-}
-.header__form .header__form-btn {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border: solid 1px white;
-  background-color: white;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  width: 50px;
-  height: 45px;
-  margin-left: -10px;
-  padding-top: 13px;
-  font-size: large;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 767px) {
-  .header__form {
-    height: 50px;
-    border: none;
-    background-color: #eaeaea;
-  }
-  .header__form .fa-map-marker-alt {
-    border: none;
-    background-color: #eaeaea;
-    font-size: medium;
-  }
-  .header__form input {
-    width: 170px;
-    border: none;
-    background-color: #eaeaea;
-    font-size: large;
-  }
-  .header__form .header__form-btn {
-    display: none;
-    border: none;
-    background-color: #eaeaea;
-  }
-}
-.footer {
-  border: solid 1px #353535;
-  padding-bottom: 30px;
-}
-.footer h3 {
-  padding-top: 10px;
-  text-align: center;
-}
-.footer ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 50px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 767px) {
-  .footer h3 {
-    text-align: left;
-  }
-  .footer ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-  }
-}
-.site {
-  animation: site-appear 5550ms;
-}
-
-@keyframes site-appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.loading-spinner {
-  animation: loading-disappear 5550ms;
-  visibility: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-.loading-spinner .dot {
-  background: black;
-  border-radius: 100%;
-  color: white;
-  height: 14px;
-  line-height: 14px;
-  text-align: center;
-  width: 14px;
-  transition: ease-out 10000ms;
-}
-.loading-spinner .dot-one {
-  -webkit-animation: dotOneKeyframes 5s ease infinite;
-  background: #9356DC;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.loading-spinner .dot-two {
-  -webkit-animation: dotTwoKeyframes 5s ease 0.4166666667s infinite;
-  background: #FF79DA;
-  position: absolute;
-  top: 0;
-  left: 14px;
-}
-.loading-spinner .dot-three {
-  -webkit-animation: dotThreeKeyframes 5s ease 0.8333333333s infinite;
-  background: #99E2D0;
-  position: absolute;
-  top: 14px;
-  left: 14px;
-}
-.loading-spinner .website-title {
-  font-family: "Shrikhand", cursive;
-  color: black;
-  font-size: 300%;
-  position: absolute;
-  bottom: 30px;
-  left: -120px;
-}
-
-@-webkit-keyframes dotOneKeyframes {
-  0% {
-    top: 0;
-    left: 0;
-  }
-  8.3333333333% {
-    top: 14px;
-    left: 0;
-  }
-  25% {
-    top: 14px;
-    left: 0;
-  }
-  33.3333333333% {
-    top: 14px;
-    left: 14px;
-  }
-  50% {
-    top: 14px;
-    left: 14px;
-  }
-  58.3333333333% {
-    top: 0;
-    left: 14px;
-  }
-  75% {
-    top: 0;
-    left: 14px;
-  }
-  83.3333333333% {
-    top: 0;
-    left: 0;
-  }
-}
-@-webkit-keyframes dotTwoKeyframes {
-  0% {
-    top: 0;
-    left: 14px;
-  }
-  8.3333333333% {
-    top: 0;
-    left: 0;
-  }
-  25% {
-    top: 0;
-    left: 0;
-  }
-  33.3333333333% {
-    top: 14px;
-    left: 0;
-  }
-  50% {
-    top: 14px;
-    left: 0;
-  }
-  58.3333333333% {
-    top: 14px;
-    left: 14px;
-  }
-  75% {
-    top: 14px;
-    left: 14px;
-  }
-  83.3333333333% {
-    top: 0;
-    left: 14px;
-  }
-}
-@-webkit-keyframes dotThreeKeyframes {
-  0% {
-    top: 14px;
-    left: 14px;
-  }
-  8.3333333333% {
-    top: 0;
-    left: 14px;
-  }
-  25% {
-    top: 0;
-    left: 14px;
-  }
-  33.3333333333% {
-    top: 0;
-    left: 0;
-  }
-  50% {
-    top: 0;
-    left: 0;
-  }
-  58.3333333333% {
-    top: 14px;
-    left: 0;
-  }
-  75% {
-    top: 14px;
-    left: 0;
-  }
-  83.3333333333% {
-    top: 14px;
-    left: 14px;
-  }
-}
-@keyframes loading-disappear {
-  from {
-    visibility: visible;
-    opacity: 1;
-  }
-  to {
-    visibility: hidden;
-    opacity: 0;
   }
 }
 
