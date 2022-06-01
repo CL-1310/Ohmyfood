@@ -9,6 +9,7 @@
             &:hover {
                 .full {
                     opacity: 1;
+                    -webkit-background-clip: text;
                     background-clip: text;
                     @include btn-gradient;
                     color: transparent;
@@ -38,6 +39,7 @@
             &:hover {
                 .full {
                     opacity: 1;
+                    -webkit-background-clip: text;
                     background-clip: text;
                     @include btn-gradient;
                     color: transparent;

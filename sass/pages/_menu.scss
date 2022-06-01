@@ -68,6 +68,10 @@
                     cursor: pointer;
                     position: relative;
                         .menu__card-text {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            word-break: break-word;
                             p {
                                 span {
                                     position: absolute;
@@ -91,6 +95,9 @@
                              }
                         }
                         &:hover {
+                            .menu__card-text {
+                                width: 50%;
+                            }
                             p span {
                                 position: absolute;
                                 right: 140px;
@@ -174,15 +181,19 @@
                 padding-bottom: 25px;
                 width: 100%;
                     .menu__card {
-                        display: block;
                         width: 90%;
                         height: 65px;
                         margin: 0 auto;
                             .menu__card-text {
-                                p:hover {
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                word-break: break-word;
+                                p {
                                     white-space: nowrap;
                                     overflow: hidden;
-                                    text-overflow: ellipsis "caviar";
+                                    text-overflow: ellipsis;
+                                    word-break: break-all;
                                 }
                             }
                     }

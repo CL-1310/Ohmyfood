@@ -120,15 +120,13 @@
         &__cards-block {
             .menu__card {
                 background-color: white;
-                line-height: 8px;
                     h3 {
                         font-size: larger;
+                        margin-top: 8px;
                     }
                         p {
                             font-size: medium;
                             font-weight: 300;
-                            word-break: break-all;
-                            text-overflow: ellipsis;
                         }
                             span {
                                 font-weight: bold;

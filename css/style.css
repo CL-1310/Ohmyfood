@@ -109,16 +109,14 @@
 }
 .container__menu .menu__cards-block .menu__card {
   background-color: white;
-  line-height: 8px;
 }
 .container__menu .menu__cards-block .menu__card h3 {
   font-size: larger;
+  margin-top: 8px;
 }
 .container__menu .menu__cards-block .menu__card p {
   font-size: medium;
   font-weight: 300;
-  word-break: break-all;
-  text-overflow: ellipsis;
 }
 .container__menu .menu__cards-block .menu__card span {
   font-weight: bold;
@@ -187,6 +185,7 @@
 }
 .restaurants__card-heart .empty:hover .full {
   opacity: 1;
+  -webkit-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: transparent;
@@ -212,6 +211,7 @@
 }
 .menu__heart .empty:hover .full {
   opacity: 1;
+  -webkit-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: transparent;
@@ -467,7 +467,7 @@
 .header__logo {
   display: flex;
   width: 100%;
-  border: solid, 5px, white;
+  border: solid 5px white;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -822,6 +822,12 @@
   cursor: pointer;
   position: relative;
 }
+.container__menu .menu__cards-block .menu__card .menu__card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
 .container__menu .menu__cards-block .menu__card .menu__card-text p span {
   position: absolute;
   right: 30px;
@@ -839,6 +845,9 @@
 }
 .container__menu .menu__cards-block .menu__card .check i {
   opacity: 0;
+}
+.container__menu .menu__cards-block .menu__card:hover .menu__card-text {
+  width: 50%;
 }
 .container__menu .menu__cards-block .menu__card:hover p span {
   position: absolute;
@@ -902,15 +911,21 @@
     width: 100%;
   }
   .container__menu .menu__cards-block .menu__card {
-    display: block;
     width: 90%;
     height: 65px;
     margin: 0 auto;
   }
-  .container__menu .menu__cards-block .menu__card .menu__card-text p:hover {
+  .container__menu .menu__cards-block .menu__card .menu__card-text {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis "caviar";
+    text-overflow: ellipsis;
+    word-break: break-word;
+  }
+  .container__menu .menu__cards-block .menu__card .menu__card-text p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
   }
 }
 
